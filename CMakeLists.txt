@@ -115,6 +115,6 @@ install(CODE "message(\"Nothing to do for install.\")")
 
 ExternalProject_Add(bot2-frames
   SOURCE_DIR ${PROJECT_SOURCE_DIR}/bot2-frames
-  BINARY_DIR ${PROJECT_SOURCE_DIR}/bot2-frames/pod-build
-  CMAKE_CACHE_ARGS ${default_cmake_args}
+  BINARY_DIR ${PROJECT_SOURCE_DIR}/bot2-frames
+  CMAKE_CACHE_ARGS ${default_cmake_args} -DUSE_BOT_VIS:BOOL=${WITH_BOT_VIS}
   DEPENDS bot2-core bot2-param bot2-lcmgl ${bot2_vis_depends})

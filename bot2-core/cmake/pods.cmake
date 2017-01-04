@@ -207,7 +207,7 @@ endfunction()
 # _pods_install_python_package(<py_src_dir> <py_module_name>)
 #
 # Internal helper function
-# Install python module in <py_src_dir> to lib/pythonX.Y/dist-packages/<py_module_name>,
+# Install python module in <py_src_dir> to lib/pythonX.Y/site-packages/<py_module_name>,
 # where X.Y refers to the current python version (e.g., 2.6)
 #
 function(_pods_install_python_package py_src_dir py_module_name)
@@ -219,7 +219,7 @@ function(_pods_install_python_package py_src_dir py_module_name)
 
     # where do we install .py files to?
     set(python_install_dir 
-        ${CMAKE_INSTALL_PREFIX}/lib/python${pyversion}/dist-packages)
+        ${CMAKE_INSTALL_PREFIX}/lib/python${pyversion}/site-packages)
 
     if(EXISTS "${py_src_dir}/__init__.py")
         #install the single module

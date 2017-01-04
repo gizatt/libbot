@@ -72,7 +72,7 @@
 # This directory can be changed by setting the PY_DEST_DIR option.
 #
 # Additionally, the .py files will be installed to 
-#   ${CMAKE_INSTALL_PREFIX}/lib/python{X.Y}/dist-packages
+#   ${CMAKE_INSTALL_PREFIX}/lib/python{X.Y}/site-packages
 #   
 # where {X.Y} refers to the python version used to build the .py files.
 #
